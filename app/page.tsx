@@ -817,13 +817,18 @@ function ParticleEarth({
 
   return (
     <group
-      ref={earthGroupRef}
-      scale={
-        isMobile
-          ? 0.62
-          : 1
-      }
-    >
+  ref={earthGroupRef}
+  position={[
+    0,
+    isMobile ? 0.65 : 0,
+    0,
+  ]}
+  scale={
+    isMobile
+      ? 0.62
+      : 1
+  }
+>
       {/* Invisible interaction sphere */}
 
       <mesh
@@ -1268,7 +1273,7 @@ export default function Home() {
   ----------------------------------------- */
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#02060b] text-white">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#02060b] text-white sm:min-h-screen">
 
       {/* =====================================
           BACKGROUND
@@ -1329,6 +1334,70 @@ export default function Home() {
       ===================================== */}
 
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent" />
+
+
+
+
+
+
+      {/* HERO TEXT */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    left-1/2
+    top-[13%]
+    z-10
+    hidden
+    w-[90%]
+    -translate-x-1/2
+    text-center
+
+    sm:block
+    sm:left-[7%]
+    sm:top-1/2
+    sm:w-[300px]
+    sm:-translate-y-1/2
+    sm:translate-x-0
+    sm:text-left
+
+    lg:left-[9%]
+    lg:w-[350px]
+  "
+>
+  <div className="mb-3 flex items-center justify-center gap-2 sm:justify-start">
+    <span className="h-px w-7 bg-cyan-300/30" />
+
+    <span className="text-[8px] font-medium tracking-[0.4em] text-cyan-300/55 sm:text-[9px]">
+      GLOBAL AIR INTELLIGENCE
+    </span>
+  </div>
+
+  <h2 className="text-[22px] font-extralight leading-[1.15] tracking-[0.08em] text-white/80 sm:text-3xl lg:text-[38px]">
+    AIR QUALITY
+  </h2>
+
+  <p className="mt-4 max-w-[300px] text-[9px] leading-relaxed tracking-[0.08em] text-white/25 sm:text-[10px]">
+    Explore real-time air quality across
+    cities around the world.
+  </p>
+
+  <div className="mt-5 flex items-center justify-center gap-2 sm:justify-start">
+    <span className="h-1 w-1 rounded-full bg-cyan-300/60" />
+
+    <span className="text-[7px] tracking-[0.3em] text-white/20 sm:text-[8px]">
+      LIVE DATA • GLOBAL COVERAGE
+    </span>
+  </div>
+
+  <p className="mt-5 text-[9px] tracking-[0.12em] text-white/25">
+    Developed By{" "}
+    <span className="text-white/45">
+      Md. Arfan Ahmed
+    </span>
+  </p>
+</div>
+
 
       {/* =====================================
           HEADER
@@ -1564,14 +1633,14 @@ export default function Home() {
         <section
           className="
             absolute
-            bottom-5
-            left-5
-            right-5
-            z-10
-            sm:bottom-8
-            sm:left-8
-            sm:right-auto
-            sm:w-[390px]
+    bottom-16
+    left-5
+    right-5
+    z-10
+    sm:bottom-8
+    sm:left-8
+    sm:right-auto
+    sm:w-[390px]
           "
         >
           <div
