@@ -1,5 +1,9 @@
 # GLOBAIR 🌍
 
+## 🌐 Live Demo
+
+[**Visit GLOBAIR →**](https://globair.vercel.app/)
+
 ### Global Air Quality Visualization
 
 GLOBAIR is an interactive 3D globe that visualizes real-time air-quality information for cities around the world.
